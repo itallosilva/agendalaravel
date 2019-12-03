@@ -2,25 +2,30 @@
 
 namespace App\Repositories;
 
-use App\Models\Pessoa;
+use App\Models\Endereco;
 use InfyOm\Generator\Common\BaseRepository;
 
 /**
- * Class PessoaRepository
+ * Class EnderecoRepository
  * @package App\Repositories
- * @version December 3, 2019, 2:52 am UTC
+ * @version December 3, 2019, 9:26 am -02
 */
 
-class PessoaRepository extends BaseRepository
+class EnderecoRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'nome',
-        'sobrenome',
-        'nascimento',
-        'email'
+        'pessoa_id',
+        'logradouro',
+        'numero',
+        'complemento',
+        'bairro',
+        'cep',
+        'cidade',
+        'uf',
+        'tipo'
     ];
 
     /**
@@ -38,6 +43,6 @@ class PessoaRepository extends BaseRepository
      **/
     public function model()
     {
-        return Pessoa::class;
+        return Endereco::class;
     }
 }

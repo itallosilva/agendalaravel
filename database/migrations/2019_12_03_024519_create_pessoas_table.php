@@ -19,6 +19,7 @@ class CreatePessoasTable extends Migration
             $table->string('sobrenome');
             $table->date('nascimento');
             $table->string('email');
+            $table->timestamps();
         });
     }
 

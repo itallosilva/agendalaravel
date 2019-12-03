@@ -57,5 +57,9 @@ class Pessoa extends Model
         'email' => 'required'
     ];
 
+    public function enderecos()
+    {
+        return $this->hasMany(\App\Models\Endereco::class);
+    } 
     
 }

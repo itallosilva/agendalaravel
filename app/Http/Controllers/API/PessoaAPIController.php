@@ -34,11 +34,12 @@ class PessoaAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $pessoas = $this->pessoaRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
+        $pessoas = $this->pessoaRepository->all();
+        // $pessoas = $this->pessoaRepository->all(
+        //     $request->except(['skip', 'limit']),
+        //     $request->get('skip'),
+        //     $request->get('limit')
+        // );
 
         return $this->sendResponse($pessoas->toArray(), 'Pessoas retrieved successfully');
     }
@@ -71,7 +72,7 @@ class PessoaAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Pessoa $pessoa */
-        $pessoa = $this->pessoaRepository->find($id);
+        $pessoa = $this->pessoaRepository->with('enderecos')->find($id);
 
         if (empty($pessoa)) {
             return $this->sendError('Pessoa not found');
