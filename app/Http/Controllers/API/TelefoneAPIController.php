@@ -42,7 +42,7 @@ class TelefoneAPIController extends AppBaseController
             $request->get('limit')
         );
 
-        return $this->sendResponse($telefones->toArray(), 'Telefones retrieved successfully');
+        return $this->sendResponse($telefones->toArray(), 'Telefones recebidos com sucesso!');
     }
 
     /**
@@ -61,7 +61,7 @@ class TelefoneAPIController extends AppBaseController
 
         $telefone = $this->telefoneRepository->create($input);
 
-        return $this->sendResponse($telefone->toArray(), 'Telefone saved successfully');
+        return $this->sendResponse($telefone->toArray(), 'Telefone salvo com sucesso!');
     }
 
     /**
@@ -80,10 +80,10 @@ class TelefoneAPIController extends AppBaseController
         $telefone = $this->telefoneRepository->findWithoutFail($id);
 
         if (empty($telefone)) {
-            return $this->sendError('Telefone not found');
+            return $this->sendError('Telefone não encontrado!');
         }
 
-        return $this->sendResponse($telefone->toArray(), 'Telefone retrieved successfully');
+        return $this->sendResponse($telefone->toArray(), 'Telefone recebido com sucesso!');
     }
 
     /**
@@ -105,12 +105,12 @@ class TelefoneAPIController extends AppBaseController
         $telefone = $this->telefoneRepository->findWithoutFail($id);
 
         if (empty($telefone)) {
-            return $this->sendError('Telefone not found');
+            return $this->sendError('Telefone não encontrado!');
         }
 
         $telefone = $this->telefoneRepository->update($input, $id);
 
-        return $this->sendResponse($telefone->toArray(), 'Telefone updated successfully');
+        return $this->sendResponse($telefone->toArray(), 'Telefone atualizado com sucesso!');
     }
 
     /**
@@ -131,11 +131,11 @@ class TelefoneAPIController extends AppBaseController
         $telefone = $this->telefoneRepository->findWithoutFail($id);
 
         if (empty($telefone)) {
-            return $this->sendError('Telefone not found');
+            return $this->sendError('Telefone não encontrado!');
         }
 
         $telefone->delete();
 
-        return $this->sendSuccess('Telefone deleted successfully');
+        return $this->sendSuccess('Telefone excluído com sucesso!');
     }
 }

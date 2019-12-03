@@ -43,7 +43,7 @@ class PessoaAPIController extends AppBaseController
         //     $request->get('limit')
         // );
 
-        return $this->sendResponse($pessoas->toArray(), 'Pessoas retrieved successfully');
+        return $this->sendResponse($pessoas->toArray(), 'Pessoas recebidas com sucesso!');
     }
 
     /**
@@ -62,7 +62,7 @@ class PessoaAPIController extends AppBaseController
 
         $pessoa = $this->pessoaRepository->create($input);
 
-        return $this->sendResponse($pessoa->toArray(), 'Pessoa saved successfully');
+        return $this->sendResponse($pessoa->toArray(), 'Pessoa salva com sucesso!');
     }
 
     /**
@@ -81,10 +81,10 @@ class PessoaAPIController extends AppBaseController
         $pessoa = $this->pessoaRepository->with(['enderecos','telefones'])->findWithoutFail($id);
 
         if (empty($pessoa)) {
-            return $this->sendError('Pessoa not found');
+            return $this->sendError('Pessoa não encontrada!');
         }
 
-        return $this->sendResponse($pessoa->toArray(), 'Pessoa retrieved successfully');
+        return $this->sendResponse($pessoa->toArray(), 'Pessoa recebida com sucesso!');
     }
 
     /**
@@ -106,12 +106,12 @@ class PessoaAPIController extends AppBaseController
         $pessoa = $this->pessoaRepository->findWithoutFail($id);
 
         if (empty($pessoa)) {
-            return $this->sendError('Pessoa not found');
+            return $this->sendError('Pessoa não encontrada!');
         }
 
         $pessoa = $this->pessoaRepository->update($input, $id);
 
-        return $this->sendResponse($pessoa->toArray(), 'Pessoa updated successfully');
+        return $this->sendResponse($pessoa->toArray(), 'Pessoa atualizada com sucesso!');
     }
 
     /**
@@ -132,11 +132,11 @@ class PessoaAPIController extends AppBaseController
         $pessoa = $this->pessoaRepository->findWithoutFail($id);
 
         if (empty($pessoa)) {
-            return $this->sendError('Pessoa not found');
+            return $this->sendError('Pessoa não encontrada!');
         }
 
         $pessoa->delete();
 
-        return $this->sendSuccess('Pessoa deleted successfully');
+        return $this->sendSuccess('Pessoa excluída com sucesso!');
     }
 }

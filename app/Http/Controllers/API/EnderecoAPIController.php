@@ -43,7 +43,7 @@ class EnderecoAPIController extends AppBaseController
         //     $request->get('limit')
         // );
 
-        return $this->sendResponse($enderecos->toArray(), 'Enderecos retrieved successfully');
+        return $this->sendResponse($enderecos->toArray(), 'Endereços recebidos com sucesso!');
     }
 
     /**
@@ -62,7 +62,7 @@ class EnderecoAPIController extends AppBaseController
 
         $endereco = $this->enderecoRepository->create($input);
 
-        return $this->sendResponse($endereco->toArray(), 'Endereco saved successfully');
+        return $this->sendResponse($endereco->toArray(), 'Endereço salvo com sucesso!');
     }
 
     /**
@@ -81,10 +81,10 @@ class EnderecoAPIController extends AppBaseController
         $endereco = $this->enderecoRepository->findWithoutFail($id);
 
         if (empty($endereco)) {
-            return $this->sendError('Endereco not found');
+            return $this->sendError('Endereco não encontrado!');
         }
 
-        return $this->sendResponse($endereco->toArray(), 'Endereco retrieved successfully');
+        return $this->sendResponse($endereco->toArray(), 'Endereço recebido com sucesso!');
     }
 
     /**
@@ -106,12 +106,12 @@ class EnderecoAPIController extends AppBaseController
         $endereco = $this->enderecoRepository->findWithoutFail($id);
 
         if (empty($endereco)) {
-            return $this->sendError('Endereco not found');
+            return $this->sendError('Endereco não encontrado!');
         }
 
         $endereco = $this->enderecoRepository->update($input, $id);
 
-        return $this->sendResponse($endereco->toArray(), 'Endereco updated successfully');
+        return $this->sendResponse($endereco->toArray(), 'Endereço atualizado com sucesso!');
     }
 
     /**
@@ -132,11 +132,11 @@ class EnderecoAPIController extends AppBaseController
         $endereco = $this->enderecoRepository->findWithoutFail($id);
 
         if (empty($endereco)) {
-            return $this->sendError('Endereco not found');
+            return $this->sendError('Endereco não encontrado!');
         }
 
         $endereco->delete();
 
-        return $this->sendSuccess('Endereco deleted successfully');
+        return $this->sendSuccess('Endereço excluído com sucesso!');
     }
 }
