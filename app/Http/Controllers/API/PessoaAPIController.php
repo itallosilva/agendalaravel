@@ -72,7 +72,7 @@ class PessoaAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Pessoa $pessoa */
-        $pessoa = $this->pessoaRepository->with('enderecos')->find($id);
+        $pessoa = $this->pessoaRepository->with(['enderecos','telefones'])->find($id);
 
         if (empty($pessoa)) {
             return $this->sendError('Pessoa not found');
