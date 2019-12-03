@@ -77,7 +77,7 @@ class TelefoneAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Telefone $telefone */
-        $telefone = $this->telefoneRepository->find($id);
+        $telefone = $this->telefoneRepository->findWithoutFail($id);
 
         if (empty($telefone)) {
             return $this->sendError('Telefone not found');
@@ -102,7 +102,7 @@ class TelefoneAPIController extends AppBaseController
         $input = $request->all();
 
         /** @var Telefone $telefone */
-        $telefone = $this->telefoneRepository->find($id);
+        $telefone = $this->telefoneRepository->findWithoutFail($id);
 
         if (empty($telefone)) {
             return $this->sendError('Telefone not found');
@@ -128,7 +128,7 @@ class TelefoneAPIController extends AppBaseController
     public function destroy($id)
     {
         /** @var Telefone $telefone */
-        $telefone = $this->telefoneRepository->find($id);
+        $telefone = $this->telefoneRepository->findWithoutFail($id);
 
         if (empty($telefone)) {
             return $this->sendError('Telefone not found');

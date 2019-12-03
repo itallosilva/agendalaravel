@@ -78,7 +78,7 @@ class PessoaAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Pessoa $pessoa */
-        $pessoa = $this->pessoaRepository->with(['enderecos','telefones'])->find($id);
+        $pessoa = $this->pessoaRepository->with(['enderecos','telefones'])->findWithoutFail($id);
 
         if (empty($pessoa)) {
             return $this->sendError('Pessoa not found');
@@ -103,7 +103,7 @@ class PessoaAPIController extends AppBaseController
         $input = $request->all();
 
         /** @var Pessoa $pessoa */
-        $pessoa = $this->pessoaRepository->find($id);
+        $pessoa = $this->pessoaRepository->findWithoutFail($id);
 
         if (empty($pessoa)) {
             return $this->sendError('Pessoa not found');
@@ -129,7 +129,7 @@ class PessoaAPIController extends AppBaseController
     public function destroy($id)
     {
         /** @var Pessoa $pessoa */
-        $pessoa = $this->pessoaRepository->find($id);
+        $pessoa = $this->pessoaRepository->findWithoutFail($id);
 
         if (empty($pessoa)) {
             return $this->sendError('Pessoa not found');

@@ -78,7 +78,7 @@ class EnderecoAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Endereco $endereco */
-        $endereco = $this->enderecoRepository->find($id);
+        $endereco = $this->enderecoRepository->findWithoutFail($id);
 
         if (empty($endereco)) {
             return $this->sendError('Endereco not found');
@@ -103,7 +103,7 @@ class EnderecoAPIController extends AppBaseController
         $input = $request->all();
 
         /** @var Endereco $endereco */
-        $endereco = $this->enderecoRepository->find($id);
+        $endereco = $this->enderecoRepository->findWithoutFail($id);
 
         if (empty($endereco)) {
             return $this->sendError('Endereco not found');
@@ -129,7 +129,7 @@ class EnderecoAPIController extends AppBaseController
     public function destroy($id)
     {
         /** @var Endereco $endereco */
-        $endereco = $this->enderecoRepository->find($id);
+        $endereco = $this->enderecoRepository->findWithoutFail($id);
 
         if (empty($endereco)) {
             return $this->sendError('Endereco not found');
