@@ -26,6 +26,8 @@ class EnderecoAPIController extends AppBaseController
     }
 
     /**
+     * @group 2. Endereços
+     * 
      * Display a listing of the Endereco.
      * GET|HEAD /enderecos
      *
@@ -45,6 +47,8 @@ class EnderecoAPIController extends AppBaseController
     }
 
     /**
+     * @group 2. Endereços
+     * 
      * Store a newly created Endereco in storage.
      * POST /enderecos
      *
@@ -62,6 +66,8 @@ class EnderecoAPIController extends AppBaseController
     }
 
     /**
+     * @group 2. Endereços
+     * 
      * Display the specified Endereco.
      * GET|HEAD /enderecos/{id}
      *
@@ -82,6 +88,8 @@ class EnderecoAPIController extends AppBaseController
     }
 
     /**
+     * @group 2. Endereços
+     * 
      * Update the specified Endereco in storage.
      * PUT/PATCH /enderecos/{id}
      *
@@ -107,6 +115,8 @@ class EnderecoAPIController extends AppBaseController
     }
 
     /**
+     * @group 2. Endereços
+     * 
      * Remove the specified Endereco from storage.
      * DELETE /enderecos/{id}
      *

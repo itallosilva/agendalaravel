@@ -26,6 +26,8 @@ class PessoaAPIController extends AppBaseController
     }
 
     /**
+     * @group 1. Pessoas
+     * 
      * Display a listing of the Pessoa.
      * GET|HEAD /pessoas
      *
@@ -45,6 +47,8 @@ class PessoaAPIController extends AppBaseController
     }
 
     /**
+     * @group 1. Pessoas
+     * 
      * Store a newly created Pessoa in storage.
      * POST /pessoas
      *
@@ -62,6 +66,8 @@ class PessoaAPIController extends AppBaseController
     }
 
     /**
+     * @group 1. Pessoas
+     * 
      * Display the specified Pessoa.
      * GET|HEAD /pessoas/{id}
      *
@@ -82,6 +88,8 @@ class PessoaAPIController extends AppBaseController
     }
 
     /**
+     * @group 1. Pessoas
+     * 
      * Update the specified Pessoa in storage.
      * PUT/PATCH /pessoas/{id}
      *
@@ -107,6 +115,8 @@ class PessoaAPIController extends AppBaseController
     }
 
     /**
+     * @group 1. Pessoas
+     * 
      * Remove the specified Pessoa from storage.
      * DELETE /pessoas/{id}
      *

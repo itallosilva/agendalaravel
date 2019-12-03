@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>1. Pessoas</h1>
+<!-- START_2f723282d4663f0d1415d3dda855cc3f -->
+<h2>Display a listing of the Pessoa.</h2>
+<p>GET|HEAD /pessoas</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/pessoas" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pessoas"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "nome": "Itallo",
+            "sobrenome": "Silva",
+            "nascimento": "1991-03-19 00:00:00",
+            "email": "user@mail.com",
+            "created_at": "2019-12-03 09:54:09",
+            "updated_at": "2019-12-03 09:54:09"
+        }
+    ],
+    "message": "Pessoas retrieved successfully"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/pessoas</code></p>
+<!-- END_2f723282d4663f0d1415d3dda855cc3f -->
+<!-- START_eba80adef9a0e0712ac372e5d7572270 -->
+<h2>Store a newly created Pessoa in storage.</h2>
+<p>POST /pessoas</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/pessoas" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pessoas"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/pessoas</code></p>
+<!-- END_eba80adef9a0e0712ac372e5d7572270 -->
+<!-- START_8668318f48023f2be6a236d34fce6885 -->
+<h2>Display the specified Pessoa.</h2>
+<p>GET|HEAD /pessoas/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/pessoas/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pessoas/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": true,
+    "data": {
+        "id": 1,
+        "nome": "Itallo",
+        "sobrenome": "Silva",
+        "nascimento": "1991-03-19 00:00:00",
+        "email": "user@mail.com",
+        "created_at": "2019-12-03 09:54:09",
+        "updated_at": "2019-12-03 09:54:09",
+        "enderecos": [
+            {
+                "id": 2,
+                "pessoa_id": 1,
+                "logradouro": "Av. Maranhão",
+                "numero": "35",
+                "complemento": null,
+                "bairro": "Brasil",
+                "cep": "45000-000",
+                "cidade": "Vitória da Conquista",
+                "uf": "BA",
+                "tipo": 1,
+                "created_at": "2019-12-03 09:54:25",
+                "updated_at": "2019-12-03 10:12:42"
+            }
+        ],
+        "telefones": [
+            {
+                "id": 1,
+                "pessoa_id": 1,
+                "numero": "779999-8888",
+                "tipo": 1,
+                "created_at": "2019-12-03 10:55:52",
+                "updated_at": "2019-12-03 10:55:52"
+            }
+        ]
+    },
+    "message": "Pessoa retrieved successfully"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/pessoas/{pessoa}</code></p>
+<!-- END_8668318f48023f2be6a236d34fce6885 -->
+<!-- START_bdf9fc7a300f3ead823c5ed6ec9c9c1b -->
+<h2>Update the specified Pessoa in storage.</h2>
+<p>PUT/PATCH /pessoas/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/pessoas/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pessoas/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/pessoas/{pessoa}</code></p>
+<p><code>PATCH api/pessoas/{pessoa}</code></p>
+<!-- END_bdf9fc7a300f3ead823c5ed6ec9c9c1b -->
+<!-- START_cb374ca8cdd9e0761ed7685fdb4373cd -->
+<h2>Remove the specified Pessoa from storage.</h2>
+<p>DELETE /pessoas/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/pessoas/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pessoas/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/pessoas/{pessoa}</code></p>
+<!-- END_cb374ca8cdd9e0761ed7685fdb4373cd -->
+<h1>2. Endereços</h1>
+<!-- START_7175ae637e507bd353f406905d672e8c -->
+<h2>Display a listing of the Endereco.</h2>
+<p>GET|HEAD /enderecos</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/enderecos" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/enderecos"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": true,
+    "data": [
+        {
+            "id": 2,
+            "pessoa_id": 1,
+            "logradouro": "Av. Maranhão",
+            "numero": "35",
+            "complemento": null,
+            "bairro": "Brasil",
+            "cep": "45000-000",
+            "cidade": "Vitória da Conquista",
+            "uf": "BA",
+            "tipo": 1,
+            "created_at": "2019-12-03 09:54:25",
+            "updated_at": "2019-12-03 10:12:42"
+        }
+    ],
+    "message": "Enderecos retrieved successfully"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/enderecos</code></p>
+<!-- END_7175ae637e507bd353f406905d672e8c -->
+<!-- START_8260d45185d508b4629cda61f2b0e19f -->
+<h2>Store a newly created Endereco in storage.</h2>
+<p>POST /enderecos</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/enderecos" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/enderecos"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/enderecos</code></p>
+<!-- END_8260d45185d508b4629cda61f2b0e19f -->
+<!-- START_9872caa4cc5091eb104352888ff875bc -->
+<h2>Display the specified Endereco.</h2>
+<p>GET|HEAD /enderecos/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/enderecos/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/enderecos/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "No query results for model [App\\Models\\Endereco] 1"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/enderecos/{endereco}</code></p>
+<!-- END_9872caa4cc5091eb104352888ff875bc -->
+<!-- START_288747bcfa3dc491b88b6706e63deff7 -->
+<h2>Update the specified Endereco in storage.</h2>
+<p>PUT/PATCH /enderecos/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/enderecos/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/enderecos/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/enderecos/{endereco}</code></p>
+<p><code>PATCH api/enderecos/{endereco}</code></p>
+<!-- END_288747bcfa3dc491b88b6706e63deff7 -->
+<!-- START_3fae117b5086d563f6aafe3920f242c2 -->
+<h2>Remove the specified Endereco from storage.</h2>
+<p>DELETE /enderecos/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/enderecos/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/enderecos/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/enderecos/{endereco}</code></p>
+<!-- END_3fae117b5086d563f6aafe3920f242c2 -->
+<h1>3. Telefones</h1>
+<!-- START_c9d499b07d856709009a5365b9030315 -->
+<h2>Display a listing of the Telefone.</h2>
+<p>GET|HEAD /telefones</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/telefones" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/telefones"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "pessoa_id": 1,
+            "numero": "779999-8888",
+            "tipo": 1,
+            "created_at": "2019-12-03 10:55:52",
+            "updated_at": "2019-12-03 10:55:52"
+        }
+    ],
+    "message": "Telefones retrieved successfully"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/telefones</code></p>
+<!-- END_c9d499b07d856709009a5365b9030315 -->
+<!-- START_f76b4301c1e3e345752b6948de2d9066 -->
+<h2>Store a newly created Telefone in storage.</h2>
+<p>POST /telefones</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/telefones" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/telefones"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/telefones</code></p>
+<!-- END_f76b4301c1e3e345752b6948de2d9066 -->
+<!-- START_10aed204dc6949933a6248e400549743 -->
+<h2>Display the specified Telefone.</h2>
+<p>GET|HEAD /telefones/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/telefones/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/telefones/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": true,
+    "data": {
+        "id": 1,
+        "pessoa_id": 1,
+        "numero": "779999-8888",
+        "tipo": 1,
+        "created_at": "2019-12-03 10:55:52",
+        "updated_at": "2019-12-03 10:55:52"
+    },
+    "message": "Telefone retrieved successfully"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/telefones/{telefone}</code></p>
+<!-- END_10aed204dc6949933a6248e400549743 -->
+<!-- START_3eba9d3ad6b03424e6e5678e7884d1f0 -->
+<h2>Update the specified Telefone in storage.</h2>
+<p>PUT/PATCH /telefones/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/telefones/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/telefones/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/telefones/{telefone}</code></p>
+<p><code>PATCH api/telefones/{telefone}</code></p>
+<!-- END_3eba9d3ad6b03424e6e5678e7884d1f0 -->
+<!-- START_b23c0fdc72eef459470fa61d7c94f6e1 -->
+<h2>Remove the specified Telefone from storage.</h2>
+<p>DELETE /telefones/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/telefones/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/telefones/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/telefones/{telefone}</code></p>
+<!-- END_b23c0fdc72eef459470fa61d7c94f6e1 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>

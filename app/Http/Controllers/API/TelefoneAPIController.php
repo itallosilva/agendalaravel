@@ -26,6 +26,8 @@ class TelefoneAPIController extends AppBaseController
     }
 
     /**
+     * @group 3. Telefones
+     * 
      * Display a listing of the Telefone.
      * GET|HEAD /telefones
      *
@@ -44,6 +46,8 @@ class TelefoneAPIController extends AppBaseController
     }
 
     /**
+     * @group 3. Telefones
+     * 
      * Store a newly created Telefone in storage.
      * POST /telefones
      *
@@ -61,6 +65,8 @@ class TelefoneAPIController extends AppBaseController
     }
 
     /**
+     * @group 3. Telefones
+     * 
      * Display the specified Telefone.
      * GET|HEAD /telefones/{id}
      *
@@ -81,6 +87,8 @@ class TelefoneAPIController extends AppBaseController
     }
 
     /**
+     * @group 3. Telefones
+     * 
      * Update the specified Telefone in storage.
      * PUT/PATCH /telefones/{id}
      *
@@ -106,6 +114,8 @@ class TelefoneAPIController extends AppBaseController
     }
 
     /**
+     * @group 3. Telefones
+     * 
      * Remove the specified Telefone from storage.
      * DELETE /telefones/{id}
      *
