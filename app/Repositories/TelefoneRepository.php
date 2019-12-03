@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Telefone;
-use App\Repositories\BaseRepository;
+use InfyOm\Generator\Common\BaseRepository;
 
 /**
  * Class TelefoneRepository
