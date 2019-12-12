@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17dc69a1e5328488c07b2468dffe675d",
+    "content-hash": "524940be676a11ea5833550c720b2834",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -60,21 +60,21 @@
         },
         {
             "name": "barryvdh/laravel-cors",
-            "version": "v0.11.4",
+            "version": "v0.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-cors.git",
-                "reference": "03492f1a3bc74a05de23f93b94ac7cc5c173eec9"
+                "reference": "c95ac944f2f20a17949aae6645692dfd3b402bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/03492f1a3bc74a05de23f93b94ac7cc5c173eec9",
-                "reference": "03492f1a3bc74a05de23f93b94ac7cc5c173eec9",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/c95ac944f2f20a17949aae6645692dfd3b402bca",
+                "reference": "c95ac944f2f20a17949aae6645692dfd3b402bca",
                 "shasum": ""
             },
             "require": {
                 "asm89/stack-cors": "^1.2",
-                "illuminate/support": "^5.5|^6",
+                "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x",
                 "php": ">=7",
                 "symfony/http-foundation": "^3.1|^4",
                 "symfony/http-kernel": "^3.1|^4"
@@ -118,7 +118,7 @@
                 "crossdomain",
                 "laravel"
             ],
-            "time": "2019-08-28T11:27:11+00:00"
+            "time": "2019-02-26T18:08:30+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1284,16 +1284,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.59",
+            "version": "1.0.61",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "1426da21dae81e1f3fe1074a166eb6dd3045f810"
+                "reference": "4fb13c01784a6c9f165a351e996871488ca2d8c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1426da21dae81e1f3fe1074a166eb6dd3045f810",
-                "reference": "1426da21dae81e1f3fe1074a166eb6dd3045f810",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4fb13c01784a6c9f165a351e996871488ca2d8c9",
+                "reference": "4fb13c01784a6c9f165a351e996871488ca2d8c9",
                 "shasum": ""
             },
             "require": {
@@ -1364,7 +1364,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-12-08T12:25:29+00:00"
+            "time": "2019-12-08T21:46:50+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1674,16 +1674,16 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "f4e7a6a1382183412246f0d361078c29fb85089e"
+                "reference": "a8593bf5176bf3d3f2966942c530be19b44ec87c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/f4e7a6a1382183412246f0d361078c29fb85089e",
-                "reference": "f4e7a6a1382183412246f0d361078c29fb85089e",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/a8593bf5176bf3d3f2966942c530be19b44ec87c",
+                "reference": "a8593bf5176bf3d3f2966942c530be19b44ec87c",
                 "shasum": ""
             },
             "require": {
@@ -1724,20 +1724,20 @@
                 "php",
                 "type"
             ],
-            "time": "2019-11-30T20:20:49+00:00"
+            "time": "2019-12-11T13:45:14+00:00"
         },
         {
             "name": "prettus/l5-repository",
-            "version": "2.6.36",
+            "version": "2.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "c4f56cffbd23d61e16d2a8a9df0c651037313b54"
+                "reference": "3442bb47354ff5b4aaeb36b79c37a5b6cc91fc82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/c4f56cffbd23d61e16d2a8a9df0c651037313b54",
-                "reference": "c4f56cffbd23d61e16d2a8a9df0c651037313b54",
+                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/3442bb47354ff5b4aaeb36b79c37a5b6cc91fc82",
+                "reference": "3442bb47354ff5b4aaeb36b79c37a5b6cc91fc82",
                 "shasum": ""
             },
             "require": {
@@ -1789,7 +1789,7 @@
                 "model",
                 "repository"
             ],
-            "time": "2019-09-11T14:09:40+00:00"
+            "time": "2019-12-09T14:10:15+00:00"
         },
         {
             "name": "prettus/laravel-validation",
@@ -3857,16 +3857,16 @@
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.9.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "27a216cbe72327b2d6369fab721a5843be71e57d"
+                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/27a216cbe72327b2d6369fab721a5843be71e57d",
-                "reference": "27a216cbe72327b2d6369fab721a5843be71e57d",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/fc10d778e4b84d5bd315dad194661e091d307c6f",
+                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f",
                 "shasum": ""
             },
             "require": {
@@ -3879,7 +3879,9 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": []
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -3901,7 +3903,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2019-11-14T13:13:06+00:00"
+            "time": "2019-12-12T13:22:17+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
