@@ -13,7 +13,7 @@ return [
     */
    
     'supportsCredentials' => true,
-    //'allowedOrigins' => ['*'],
+    'allowedOrigins' => ['*'],
     'allowedOriginsPatterns' => [],
     'allowedHeaders' => ['X-Requested-With', 'content-type', 'Accept', 'Authorization'],
     'allowedMethods' => ['OPTIONS', 'GET', 'POST', 'PUT',  'DELETE'],
