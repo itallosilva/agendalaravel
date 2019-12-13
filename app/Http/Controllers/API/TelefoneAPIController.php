@@ -36,11 +36,11 @@ class TelefoneAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $telefones = $this->telefoneRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
+        $telefones = $this->telefoneRepository->all();
+        //     $request->except(['skip', 'limit']),
+        //     $request->get('skip'),
+        //     $request->get('limit')
+        // );
 
         return $this->sendResponse($telefones->toArray(), 'Telefones recebidos com sucesso!');
     }
